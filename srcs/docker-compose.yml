@@ -1,0 +1,79 @@
+services:
+
+  # =========================
+  # MARIADB
+  # =========================
+  mariadb:
+    build:
+      context: ./requirements/mariadb
+    container_name: mariadb
+    networks:
+      - inception
+    expose:
+      - "${MYSQL_PORT}"
+    env_file:
+      - .env
+    volumes:
+      - mariadb_volume:/var/lib/mysql
+    restart: always
+
+  # =========================
+  # NGINX
+  # =========================
+  nginx:
+    build:
+      context: ./requirements/nginx
+    container_name: nginx
+    depends_on:
+      - mariadb
+    ports:
+      - "443:443"
+    networks:
+      - inception
+    env_file:
+      - .env
+    volumes:
+      - wordpress_volume:/var/www/html
+    restart: always
+
+  # =========================
+  # WORDPRESS
+  # =========================
+  wordpress:
+    build:
+      context: ./requirements/wordpress
+    container_name: wordpress
+    depends_on:
+    - mariadb
+    networks:
+    - inception
+    env_file:
+    - .env
+    volumes:
+    - wordpress_volume:/var/www/html
+    restart: always
+
+# =========================
+# NETWORK
+# =========================
+networks:
+  inception:
+    driver: bridge
+
+# =========================
+# VOLUMES
+# =========================
+volumes:
+  mariadb_volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/dda-fons/data/mariadb
+
+  wordpress_volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/dda-fons/data/wordpress

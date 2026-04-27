@@ -1,0 +1,43 @@
+# Variáveis de Ambiente (NUNCA fazer commit)
+.env
+.env.local
+.env.*.local
+
+# Certificados SSL
+*.key
+*.pem
+*.crt
+*.csr
+
+# Logs
+*.log
+logs/
+
+# Dados persistentes
+data/
+volumes/
+mysql/
+wordpress/
+
+# Docker
+.docker/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporários
+tmp/
+temp/
+cache/
+
+# Build
+dist/
+build/
+
+# Certificados gerados
+srcs/requirements/nginx/conf/ssl/
