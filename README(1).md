@@ -1,6 +1,6 @@
 # Inception
 
-*This project has been created as part of the 42 curriculum by [your_login].*
+*This project has been created as part of the 42 curriculum by dda-fons.*
 
 ## Description
 
@@ -39,43 +39,34 @@ This project teaches fundamental concepts of:
 Your project must follow this structure:
 
 ```
-project_root/
-├── Makefile                          # Main build orchestration
-├── README.md                         # This file
-├── USER_DOC.md                       # User documentation
-├── DEV_DOC.md                        # Developer documentation
-├── srcs/
-│   ├── docker-compose.yml            # Docker Compose configuration
-│   ├── .env                          # Environment variables (git ignored)
-│   └── requirements/
-│       ├── nginx/
-│       │   ├── Dockerfile
-│       │   ├── conf/
-│       │   │   └── nginx.conf
-│       │   └── tools/
-│       │       └── (setup scripts)
-│       ├── wordpress/
-│       │   ├── Dockerfile
-│       │   ├── .dockerignore
-│       │   ├── conf/
-│       │   └── tools/
-│       │       └── (setup scripts)
-│       ├── mariadb/
-│       │   ├── Dockerfile
-│       │   ├── .dockerignore
-│       │   ├── conf/
-│       │   │   └── my.cnf
-│       │   └── tools/
-│       │       └── (database initialization)
-│       ├── bonus/                    # (Optional)
-│       │   ├── redis/
-│       │   ├── ftp/
-│       │   └── ...
-│       └── tools/                    # Shared utilities
-└── secrets/                          # Credentials (git ignored)
-    ├── credentials.txt
-    ├── db_password.txt
-    └── db_root_password.txt
+inception/
+├── Makefile                    # Automation
+├── .env                        # Global variables (DO NOT COMMIT!)
+├── .gitignore                  # Ignore sensitive files
+├── INSTALLATION.md             # Full setup guide
+├── README.md                   # This file
+└── srcs/
+    ├── docker-compose.yml      # Orchestration
+    ├── .env                    # Variable backup
+    └── requirements/
+        ├── nginx/
+        │   ├── Dockerfile      # NGINX image
+        │   └── conf/
+        │       └── nginx.conf   # TLS configuration
+        |
+        ├── wordpress/
+        │   ├── Dockerfile      # WordPress image
+        │   ├── conf/
+        │   │   └── www.conf     # PHP-FPM configuration
+        │   └── tools/
+        │       └── wordpress-init.sh
+        │
+        └── mariadb/
+            ├── Dockerfile      # MariaDB image
+            ├── conf/
+            │   └── mariadb.conf # MariaDB configuration
+            └── tools/
+                └── mariadb-init.sh
 ```
 
 ### Getting Started
