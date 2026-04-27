@@ -118,25 +118,13 @@ make logs      # View container logs
 make ps        # List running containers
 ```
 
-## Resources
-
-### Docker Documentation
-- [Docker Official Documentation](https://docs.docker.com/)
-- [Docker Compose Reference](https://docs.docker.com/compose/compose-file/)
-- [Dockerfile Best Practices](https://docs.docker.com/develop/dockerfile_best-practices/)
-- [Docker Networking](https://docs.docker.com/network/)
-
-### Container Best Practices
-- [12 Factor App Methodology](https://12factor.net/)
-- [Dockerfile Best Practices](https://docs.docker.com/develop/dockerfile_best-practices/)
-- [Running Processes in Containers](https://docs.docker.com/config/containers/start-containers-automatically/)
-
-### Technologies Used
-- [NGINX Documentation](https://nginx.org/en/docs/)
-- [MariaDB Documentation](https://mariadb.com/docs/)
-- [WordPress Documentation](https://wordpress.org/support/)
-- [PHP-FPM Documentation](https://www.php.net/manual/en/install.fpm.php)
-
+## Resources 
+### Videos
+ - https://www.youtube.com/watch?v=Ud7Npgi6x8E&t=290s
+ - https://www.youtube.com/watch?v=9FtERdqKa2s
+ - https://www.youtube.com/watch?v=DQdB7wFEygo&t=48s
+### AI Assistance
+AI was used as a technical support tool to clarify concepts related to Docker container orchestration and service networking between NGINX, MariaDB, and WordPress. It also assisted in debugging through interpretation of logs, configuration files, and volume behavior.
 
 ## Project Description: Design Choices
 
