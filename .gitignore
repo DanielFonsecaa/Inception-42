@@ -17,7 +17,6 @@ logs/
 data/
 volumes/
 mysql/
-wordpress/
 
 # Docker
 .docker/
