@@ -1,6 +1,7 @@
 <div align="center">
 <img width="150" height="150" alt="inceptione" src="https://github.com/user-attachments/assets/13982858-1821-4983-b7f7-5b8481339269" />
 </div>
+
 # Inception
 
 *This project has been created as part of the 42 curriculum by dda-fons.*
